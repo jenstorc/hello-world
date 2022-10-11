@@ -2,12 +2,10 @@
 name: CD - Jekyll
 
 on:
-  # Runs on pushes targeting the default branch
-  #pull_request:
-  #  branches: ["main"]
-  #  types: [closed]
-  push :
+  # Runs on pull request closed
+  pull_request:
     branches: ["main"]
+    types: [closed]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
