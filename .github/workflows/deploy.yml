@@ -54,5 +54,6 @@ jobs:
       - name : Angular Deploy gh-pages Actions
         # You may pin to the exact commit or the version.
         # uses: AhsanAyaz/angular-deploy-gh-pages-actions@0e4f1a953d00116ca38fbf1bcdb37f91923015ef
-        uses: actions/angular-deploy-gh-pages-actions@v1
+        id: deployment
+        uses: actions/deploy-pages@v1
   
