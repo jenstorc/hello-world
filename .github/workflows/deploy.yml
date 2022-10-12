@@ -34,14 +34,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
+        run: npm run build:prod
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      - name: Build
-        run: npm run build:prod
 
   # Deployment job
   deploy:
