@@ -48,7 +48,7 @@ jobs:
       #- name: Upload artifact
       #  uses: actions/upload-pages-artifact@v1
       - name: Test dossier
-        run : cat _site/index.html
+        run : ls -la
       #- name: Build
       #  run: npm run build:prod
         
