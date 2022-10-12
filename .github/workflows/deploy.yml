@@ -45,8 +45,8 @@ jobs:
 
       - name: Build
         run: npm run build:prod
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      #- name: Upload artifact
+      #  uses: actions/upload-pages-artifact@v1
       - name: Test dossier
         run : cat _site/index.html
       #- name: Build
