@@ -3,11 +3,9 @@ name: CD - Jekyll
 
 on:
   # Runs on pull request closed
-  #pull_request:
-  #  branches: ["main"]
-  #  types: [closed]
-  push : 
+  pull_request:
     branches: ["main"]
+    types: [closed]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,6 +24,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
     - name: Checkout
       uses: actions/checkout@v2
