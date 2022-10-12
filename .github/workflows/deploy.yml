@@ -38,7 +38,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./src
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -62,6 +62,6 @@ jobs:
         uses: actions/deploy-pages@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: dist/angular-github-actions
           enable_jekyll: true
   
